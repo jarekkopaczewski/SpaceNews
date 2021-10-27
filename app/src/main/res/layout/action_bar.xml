@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#1d2327"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp" app:srcCompat="@drawable/arrow" android:id="@+id/backButton"
+            android:rotation="180" app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.6" android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp" android:layout_marginBottom="5dp"/>
+    <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp" app:srcCompat="@drawable/share_variant_outline"
+            android:id="@+id/shareButton"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" android:layout_marginEnd="10dp" android:layout_marginRight="10dp"/>
+    <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp" app:srcCompat="@drawable/comment_outline" android:id="@+id/commentButton"
+            app:layout_constraintEnd_toStartOf="@+id/shareButton" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toEndOf="@+id/backButton" app:layout_constraintHorizontal_bias="1.0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

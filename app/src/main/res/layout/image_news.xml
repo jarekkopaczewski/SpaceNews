@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:layout_marginBottom="10dp"
+                                                   android:layout_marginTop="10dp"
+>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/imageCard" app:cardCornerRadius="10dp"
+            android:layout_marginLeft="5dp" android:layout_marginStart="5dp"
+            android:layout_marginRight="5dp" android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="20dp">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" tools:srcCompat="@tools:sample/backgrounds/scenic"
+                android:id="@+id/photo" android:scaleType="fitXY"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="123dp" app:srcCompat="@drawable/shadow" android:id="@+id/imageView16"
+                android:rotation="180" android:scaleType="fitXY"
+                android:tint="#46484A"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="123dp" app:srcCompat="@drawable/shadow" android:id="@+id/imageView15"
+                android:tint="#46484A" android:layout_marginTop="105dp" android:alpha="0.8"
+                android:layout_gravity="top" android:scaleType="fitXY"/>
+        <TextView
+                android:text="Mark down"
+                android:layout_width="84dp"
+                android:layout_height="wrap_content" android:id="@+id/date"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp" android:gravity="bottom" android:layout_gravity="bottom|left"
+                android:layout_marginBottom="10dp" android:textSize="12sp" android:textColor="#E8E4E4"
+                android:alpha="0.5"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content" android:id="@+id/siteText"
+                android:gravity="bottom|center" android:layout_gravity="bottom|right"
+                android:layout_marginBottom="10dp" android:textSize="12sp" android:textColor="#E8E4E4"
+                android:alpha="0.5" android:layout_marginRight="25dp" android:layout_marginEnd="25dp"/>
+        <TextView
+                android:text=" | "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/date3"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp" android:textSize="14sp" android:textColor="#E8E4E4"
+                android:alpha="0.5" android:layout_gravity="bottom|center"
+        />
+        <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/titleView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp" android:gravity="bottom" android:layout_gravity="bottom|left"
+                android:layout_marginBottom="30dp" android:textSize="15sp" android:textColor="#E8E4E4"
+                android:layout_marginRight="10dp" android:layout_marginEnd="10dp"/>
+        <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp" app:srcCompat="@drawable/star_minus_outline"
+                android:id="@+id/markStar" android:layout_gravity="bottom|center_horizontal" android:tint="#E8E4E4"
+                android:alpha="0.9" android:layout_marginBottom="5dp" android:layout_marginRight="45dp"
+                android:layout_marginEnd="45dp"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

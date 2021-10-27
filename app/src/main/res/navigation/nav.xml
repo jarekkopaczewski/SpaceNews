@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.example.spacenews.HomeFragment"
+              android:label="fragment_home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_homeFragment_to_newsFragment" app:destination="@id/newsFragment"/>
+        <action android:id="@+id/action_homeFragment_to_articleFragment" app:destination="@id/articleFragment"/>
+    </fragment>
+    <fragment android:id="@+id/newsFragment" android:name="com.example.spacenews.NewsFragment"
+              android:label="fragment_news" tools:layout="@layout/fragment_news">
+        <action android:id="@+id/action_newsFragment_to_likeFragment" app:destination="@id/likeFragment"/>
+        <action android:id="@+id/action_newsFragment_to_articleFragment" app:destination="@id/articleFragment"/>
+    </fragment>
+    <fragment android:id="@+id/likeFragment" android:name="com.example.spacenews.LikeFragment"
+              android:label="fragment_like" tools:layout="@layout/fragment_like">
+        <action android:id="@+id/action_likeFragment_to_profileFragment" app:destination="@id/profileFragment"/>
+        <action android:id="@+id/action_likeFragment_to_articleFragment" app:destination="@id/articleFragment"/>
+    </fragment>
+    <fragment android:id="@+id/profileFragment" android:name="com.example.spacenews.ProfileFragment"
+              android:label="fragment_profile" tools:layout="@layout/fragment_profile"/>
+    <fragment android:id="@+id/articleFragment" android:name="com.example.spacenews.ArticleFragment"
+              android:label="fragment_article" tools:layout="@layout/fragment_article"/>
+</navigation>

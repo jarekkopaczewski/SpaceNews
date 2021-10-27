@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_outline"
+            android:title="@string/home_nav"/>
+    <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/newspaper_variant_w"
+            android:title="@string/news_nav"/>
+    <item
+            android:id="@+id/nav_like"
+            android:icon="@drawable/heart_multiple_outline"
+            android:title="@string/like_nav"/>
+
+    <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/account_w"
+            android:title="@string/profile_nav"/>
+</menu>

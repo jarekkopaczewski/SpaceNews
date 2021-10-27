@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#3F4143"
+                android:orientation="vertical" tools:ignore="ExtraText" android:id="@+id/mainLayout">
+    <include layout="@layout/action_bar_main" android:layout_alignParentTop="true"
+             android:layout_alignParentStart="true"
+             android:layout_alignParentLeft="true" android:layout_height="wrap_content"
+             android:layout_width="match_parent" android:layout_alignParentEnd="true"
+             android:layout_alignParentRight="true" android:id="@+id/include"/>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/include"
+            android:foregroundGravity="top" app:layout_constraintVertical_bias="0.0">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/mMainImage"
+                android:scaleType="fitXY"
+        />
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp" app:srcCompat="@drawable/shadow"
+                android:id="@+id/imageView14"
+                android:tint="#1d2327" android:scaleType="fitXY"
+                android:rotation="180"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="186dp" app:srcCompat="@drawable/shadow"
+                android:id="@+id/imageView13"
+                android:layout_marginTop="64dp"
+                android:tint="#242525" android:scaleType="fitXY"
+        />
+        <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="21dp" android:id="@+id/titleHome"
+                android:gravity="bottom" android:layout_gravity="bottom|left"
+                android:textSize="15sp" android:textColor="#E4E1E1"
+                android:alpha="0.9"
+                android:layout_marginLeft="10dp" android:layout_marginStart="10dp"
+                android:layout_marginBottom="30dp" android:layout_marginRight="10dp" android:layout_marginEnd="10dp"/>
+        <TextView
+                android:text=" | "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/date2"
+                android:gravity="bottom" android:layout_gravity="bottom|center"
+                android:textSize="14sp" android:textColor="#E4E1E1"
+                android:alpha="0.8"
+                android:layout_marginBottom="10dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content" android:id="@+id/siteHome"
+                android:gravity="bottom|center" android:layout_gravity="bottom|right"
+                android:textSize="12sp" android:textColor="#E4E1E1"
+                android:alpha="0.9"
+                android:layout_marginBottom="10dp" android:layout_marginRight="25dp" android:layout_marginEnd="25dp"/>
+        <TextView
+                android:text="Mark down"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content" android:id="@+id/date6"
+                android:gravity="bottom|center" android:layout_gravity="bottom|right|left"
+                android:textSize="12sp" android:textColor="#E4E1E1"
+                android:alpha="0.9"
+                android:layout_marginBottom="10dp" android:layout_marginLeft="30dp" android:layout_marginStart="30dp"/>
+        <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp" app:srcCompat="@drawable/star_minus_outline"
+                android:id="@+id/homeStar" android:layout_gravity="bottom|center_horizontal|center_vertical"
+                android:tint="#E8E4E4"
+                android:alpha="0.9"
+                android:layout_marginBottom="5dp" android:layout_marginRight="40dp" android:layout_marginEnd="40dp"
+        />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

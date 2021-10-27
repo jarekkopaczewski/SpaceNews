@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imagesRecycler" type="id"/>
+    <item name="searchText" type="id"/>
+    <item name="pointsLayout" type="id"/>
+    <item name="searchButton" type="id"/>
+    <item name="rightArrow" type="id"/>
+    <item name="leftArrow" type="id"/>
+    <item name="listOfProducts" type="id"/>
+    <item name="se" type="id"/>
+    <item name="imageView" type="id"/>
+    <item name="imageView2" type="id"/>
+    <item name="imageView3" type="id"/>
+    <item name="imageView4" type="id"/>
+    <item name="imageView5" type="id"/>
+    <item name="imageView6" type="id"/>
+    <item name="imageView7" type="id"/>
+    <item name="imageView8" type="id"/>
+    <item name="switchToWeb" type="id"/>
+</resources>
