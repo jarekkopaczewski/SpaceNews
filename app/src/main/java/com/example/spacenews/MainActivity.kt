@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
 class MainActivity : AppCompatActivity()
 {
     private var homeFragment = HomeFragment()
@@ -26,32 +25,42 @@ class MainActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val bottomNav: BottomNavigationView = findViewById(R.id.bottomNav)
+
         supportActionBar?.hide()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor = Color.parseColor("#1d2327")
         }
 
-        val bottomNav: BottomNavigationView = findViewById(R.id.bottomNav)
-        val layout: RelativeLayout = findViewById(R.id.frame_layout)
-
+        // replace fragment when click on item in bottom navigation bar
         bottomNav.setOnNavigationItemSelectedListener { item ->
             lateinit var selectedFragment: Fragment
-            supportActionBar?.hide()
-            when (item.itemId) {
-                R.id.nav_home -> selectedFragment = homeFragment
+            var backStackName = ""
+            when(item.itemId)
+            {
+                R.id.nav_home -> {
+                    LikedArticles.setHomeCount(1)
+                    selectedFragment = homeFragment
+                    backStackName = "home"}
                 R.id.nav_news -> {
-                    newsFragment.reset()
-                    selectedFragment = newsFragment}
-                R.id.nav_like -> selectedFragment = likeFragment
-                R.id.nav_profile -> selectedFragment = profileFragment
+                    LikedArticles.setCount(1)
+                    selectedFragment = newsFragment
+                    backStackName = "news"}
+                R.id.nav_like -> {
+                    selectedFragment = likeFragment
+                    backStackName = "like"
+                }
+                R.id.nav_profile -> {
+                    selectedFragment = profileFragment
+                    backStackName = "profile"
+                }
             }
             val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
             transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
             transaction.replace(R.id.frame_layout, selectedFragment)
-            transaction.addToBackStack(null)
+            transaction.addToBackStack(backStackName)
             transaction.commit()
             true
         }
-
     }
 }

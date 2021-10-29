@@ -19,6 +19,7 @@ class NewsFragment : Fragment()
 {
     private lateinit var layout: LinearLayout
     private lateinit var scroll: SwipeRefreshLayout
+    private lateinit var nested: NestedScrollView
     private var currentId = 1
     private var list:MutableList<CustomImage> = mutableListOf()
 
@@ -31,9 +32,15 @@ class NewsFragment : Fragment()
         val view:View = inflater.inflate(R.layout.fragment_news, container, false)
         layout = view.findViewById(R.id.linearNew)
         scroll = view.findViewById(R.id.scrollNew)
+        nested = view.findViewById(R.id.newsScroll)
 
         addArticles()
+        addListeners()
+        return view
+    }
 
+    private fun addListeners()
+    {
         layout.setOnClickListener{
             addArticles()
         }
@@ -42,11 +49,11 @@ class NewsFragment : Fragment()
             addArticles()
             scroll.isRefreshing = false
         }
-        return view
     }
 
     private fun addArticles()
     {
+        nested.fullScroll(View.FOCUS_DOWN)
         currentId = LikedArticles.getCount()
         for( i in 0..5 )
         {
@@ -62,6 +69,7 @@ class NewsFragment : Fragment()
         {
             p.setOnClickListener {
                 animate(p)
+                LikedArticles.setCount(0)
                 val articleFragment = ArticleFragment()
                 articleFragment.setID(p.getNumber())
                 activity!!.supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
@@ -70,8 +78,6 @@ class NewsFragment : Fragment()
                     .commit()
             }
         }
-
-        println("size = ${layout.size}")
     }
 
     private fun animate(v: View)
@@ -80,10 +86,5 @@ class NewsFragment : Fragment()
         val zoomOut: Animation = AnimationUtils.loadAnimation(context, R.anim.zoomout)
         v.startAnimation(zoomIn)
         v.startAnimation(zoomOut)
-    }
-
-    fun reset()
-    {
-        currentId = 1;
     }
 }

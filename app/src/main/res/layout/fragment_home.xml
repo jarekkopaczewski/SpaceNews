@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/include"
-            android:foregroundGravity="top" app:layout_constraintVertical_bias="0.0">
+            android:foregroundGravity="top" app:layout_constraintVertical_bias="0.0" android:id="@+id/cardView">
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="250dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/mMainImage"
@@ -34,7 +34,6 @@
                 android:tint="#242525" android:scaleType="fitXY"
         />
         <TextView
-                android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="21dp" android:id="@+id/titleHome"
                 android:gravity="bottom" android:layout_gravity="bottom|left"
@@ -51,7 +50,6 @@
                 android:alpha="0.8"
                 android:layout_marginBottom="10dp"/>
         <TextView
-                android:text="TextView"
                 android:layout_width="153dp"
                 android:layout_height="wrap_content" android:id="@+id/siteHome"
                 android:gravity="bottom|center" android:layout_gravity="bottom|right"
@@ -75,5 +73,24 @@
                 android:layout_marginBottom="5dp" android:layout_marginRight="40dp" android:layout_marginEnd="40dp"
         />
     </androidx.cardview.widget.CardView>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="367dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/refreshHome" android:layout_marginTop="5dp" android:layout_marginBottom="10dp"
+            android:rotation="180">
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:fillViewport="true" android:id="@+id/homeScroll">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/recycler" android:rotation="180">
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
