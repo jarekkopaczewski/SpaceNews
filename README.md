@@ -7,7 +7,7 @@
 
 ## General info
 
-<img src = "https://github.com/jarekkopaczewski/SpaceNews/blob/2be2206b7bef6e45a3a2d1ee08157029887b4b55/ss_1.jpg" widtg = "400"/>
+<img src = "https://github.com/jarekkopaczewski/SpaceNews/blob/2be2206b7bef6e45a3a2d1ee08157029887b4b55/ss_1.jpg" width = "400"/>
 
 ## Built With
 
