@@ -27,6 +27,8 @@
 
 * [Kotlin](https://kotlinlang.org/)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+* [Volley](https://github.com/google/volley)
+* [Gson](https://github.com/google/gson)
 
 ## License
 
