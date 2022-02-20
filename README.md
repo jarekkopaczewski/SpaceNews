@@ -1,5 +1,9 @@
 # Table of contents
 * [General info](#general-info)
+* [Main page](#main-page)
+* [News page](#news-page)
+* [Liked page](#liked-page)
+* [Article page](#article-page)
 * [Built With](#built-with)
 * [License](#license)
 
@@ -22,6 +26,7 @@
 ## Built With
 
 * [Kotlin](https://kotlinlang.org/)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
 ## License
 
