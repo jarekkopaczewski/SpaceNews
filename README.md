@@ -7,7 +7,7 @@
 
 ## General info
 
-![Product Name Screen Shot](https://github.com/jarekkopaczewski/TwinEcho/blob/e82460d70e3dbb9e6220f74dcf8eb0781a36adcc/TwinDelay.png)
+<img src = "https://github.com/jarekkopaczewski/SpaceNews/blob/2be2206b7bef6e45a3a2d1ee08157029887b4b55/ss_1.jpg" widtg = 400>
 
 ## Built With
 
