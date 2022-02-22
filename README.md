@@ -5,6 +5,7 @@
 * [Liked page](#liked-page)
 * [Article page](#article-page)
 * [Built With](#built-with)
+* [Example of database connection](#example-of-database-connection)
 * [License](#license)
 
 # About The Project
