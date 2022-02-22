@@ -9,7 +9,7 @@
 
 # About The Project
 
-Articles api https://spaceflightnewsapi.net/
+The application is used to view articles about space downloaded from a database. App use API(https://spaceflightnewsapi.net/) to get articles data and photos. Access to the database is done by Volley library that invoke SQL queries and return responses as a JSON array/object. The application uses the GSON library to process responses to the objects and Picasso library to process photos.
 
 ## General info
 
@@ -28,9 +28,32 @@ Articles api https://spaceflightnewsapi.net/
 ## Built With
 
 * [Kotlin](https://kotlinlang.org/)
+* [Gradle](https://gradle.org/)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 * [Volley](https://github.com/google/volley)
 * [Gson](https://github.com/google/gson)
+* [Picasso](https://github.com/square/picasso)
+
+## Example of database connection
+
+```kotlin
+private fun makeUrlRequest()
+{
+    val request = StringRequest(Request.Method.GET, "https://api.spaceflightnewsapi.net/v3/articles/$idParam",
+        {
+            message = Gson().fromJson(it, Message::class.java)
+            Picasso.get().load(message.imageUrl).into(mMainImage);
+            summaryText.text = message.summary
+            titleText.text = message.title
+            dateText.append(message.publishedAt.substring(0,10))
+            editDateText.append(message.updatedAt.substring(0,10))
+        })
+    {
+        Toast.makeText(context, "Connection error", Toast.LENGTH_LONG).show();
+    }
+    queue.add(request)
+}
+```
 
 ## License
 
