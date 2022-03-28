@@ -7,7 +7,6 @@
 * [Built With](#built-with)
 * [Example of database connection](#example-of-database-connection)
 * [License](#license)
-
 # About The Project
 
 The application is used to view articles about space downloaded from a database. App use API(https://spaceflightnewsapi.net/) to get articles data and photos. Access to the database is done by Volley library that invoke SQL queries and return responses as a JSON array/object. The application uses the GSON library to process responses to the objects and Picasso library to process photos.
@@ -34,7 +33,6 @@ The application is used to view articles about space downloaded from a database.
 * [Volley](https://github.com/google/volley)
 * [Gson](https://github.com/google/gson)
 * [Picasso](https://github.com/square/picasso)
-
 ## Example of database connection
 
 ```kotlin
